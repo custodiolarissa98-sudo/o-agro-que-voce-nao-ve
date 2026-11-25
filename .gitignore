@@ -1,7 +1,8 @@
-*.mp4
-*.onnx
-voices-*.bin
+**/index.html
+**/mix.wav
 **/prev/
 **/seg*.mp4
-**/mix.wav
-**/index.html
+*.mp4
+*.onnx
+list.txt
+voices-*.bin

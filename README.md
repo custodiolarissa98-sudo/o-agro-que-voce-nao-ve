@@ -4,6 +4,7 @@ Série de vídeos educativos verticais (9:16, 1080×1920) para Instagram Reels e
 
 ## Episódios
 - `ep01_estomatos/` — "O segredo das pequenas bocas das plantas" (75 s)
+- `ep02_cabelo_milho/` — "O Segredo do Cabelo do Milho" (75 s). Motor compartilhado em `build/core.js`; `build/build.py` monta o `index.html`.
 
 ## Como gerar um episódio (resumo)
 1. `tts/gen.py` — narração (modelo Kokoro; os arquivos `kokoro-v1.0.onnx` e `voices-v1.0.bin` vêm de https://github.com/thewh1teagle/kokoro-onnx/releases e não ficam no repositório).
