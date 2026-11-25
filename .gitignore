@@ -1,0 +1,7 @@
+*.mp4
+*.onnx
+voices-*.bin
+**/prev/
+**/seg*.mp4
+**/mix.wav
+**/index.html
