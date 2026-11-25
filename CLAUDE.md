@@ -8,7 +8,7 @@ Todo episódio novo segue estes padrões. Não mude nada aqui sem autorização 
 **Voz oficial da série (desde 25/11/2026): voz do CapCut**, escolhida pela dona do projeto por soar mais real
 (perguntas com entonação de pergunta, ritmo natural).
 - **Origem:** aplicativo CapCut → editor → Texto → Adicionar texto → **"Texto em áudio"**.
-- **Nome da voz no CapCut:** A CONFIRMAR com a dona do projeto. É uma voz feminina (tom médio ≈ 247 Hz).
+- **Nome da voz no CapCut:** **"Apresentadora"** (voz feminina, tom médio ≈ 247 Hz). Usar sempre esta.
 - **Fluxo:** a dona do projeto gera a narração no CapCut (um parágrafo por cena, sem música) e envia o vídeo/áudio exportado.
   O Claude extrai a voz, separa os parágrafos pelas pausas e encaixa cada um na sua cena.
   Se um parágrafo não couber na cena, acelerar no máximo ~12% (`atempo`) ou ajustar a duração das cenas.
