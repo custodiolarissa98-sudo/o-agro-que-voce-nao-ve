@@ -5,6 +5,18 @@ Todo episódio novo segue estes padrões. Não mude nada aqui sem autorização 
 
 ## Narração (OBRIGATÓRIO — mesma voz em todos os episódios)
 
+**Voz oficial da série (desde 25/11/2026): voz do CapCut**, escolhida pela dona do projeto por soar mais real
+(perguntas com entonação de pergunta, ritmo natural).
+- **Origem:** aplicativo CapCut → editor → Texto → Adicionar texto → **"Texto em áudio"**.
+- **Nome da voz no CapCut:** A CONFIRMAR com a dona do projeto. É uma voz feminina (tom médio ≈ 247 Hz).
+- **Fluxo:** a dona do projeto gera a narração no CapCut (um parágrafo por cena, sem música) e envia o vídeo/áudio exportado.
+  O Claude extrai a voz, separa os parágrafos pelas pausas e encaixa cada um na sua cena.
+  Se um parágrafo não couber na cena, acelerar no máximo ~12% (`atempo`) ou ajustar a duração das cenas.
+  Referência: `ep01_estomatos/tts_capcut/` e `ep01_estomatos/build/audio_capcut.py`.
+- O Claude **não consegue** gerar essa voz sozinho (o CapCut não tem conector nem API pública).
+- O vídeo enviado pode ter imagens pessoais de fundo: nunca salvar o vídeo bruto no repositório, só a voz extraída.
+
+### Voz anterior (Kokoro) — usar só se a dona do projeto pedir
 - **Motor de voz:** Kokoro TTS v1.0, via pacote Python `kokoro-onnx` (versão 0.6.1)
 - **Arquivos do modelo** (não ficam no repositório; baixar sempre destes endereços):
   - https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
@@ -14,6 +26,10 @@ Todo episódio novo segue estes padrões. Não mude nada aqui sem autorização 
 - **Velocidade:** `speed=1.15` (padrão). Só se uma frase não couber no tempo da cena, aumentar até no máximo `1.38`. No episódio 01, só a cena 7 usou 1.38.
 - **Geração:** um arquivo WAV por cena (24 kHz). Referência: `ep01_estomatos/tts/gen.py`.
 - **Tratamento na mixagem:** passa-altas de 80 Hz; pico da narração em 0,89; a música abaixa cerca de 55% enquanto há fala. Referência: `ep01_estomatos/build/audio.py`.
+- **Perguntas:** essa voz termina perguntas como afirmações; se for usada, corrigir com `tools/perguntas.py`.
+
+### Mixagem e volume (vale para qualquer voz)
+- **Tratamento na mixagem:** passa-altas de 80 Hz; pico da narração em 0,89; a música abaixa cerca de 55% enquanto há fala.
 - **Volume final:** loudnorm I=-14 LUFS, TP=-1,5 dB; áudio AAC 192 kbps, 48 kHz.
 
 ```python

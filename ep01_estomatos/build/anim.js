@@ -459,8 +459,8 @@ function scene8(t) {
   xfade(ss(71.0, 71.5, t) * (t < 72.7 ? 1 : 0), () => leafScene(t, elerp(10, .5, eio((t - 71.0) / 1.5)), 690, 860, true));
   const fz = ss(72.1, 72.7, t); if (fz > 0) xfade(fz, () => { const k = eio((t - 72.1) / 2.9); drawField(t, { pal: PAL.set, spr: SPR.set, cz: lerp(6, 2, k), camH: lerp(.8, 3.0, k), camX: 0, hy: lerp(980, 820, k), sun: [540, lerp(940, 790, k)], sunCol: ORANGE }); });
   if (t < 72.2) warp(t, 70.4, 72.0, '255,220,170');
-  pill(t, 72.4, 75.2, 'O AGRO QUE VOCÊ NÃO VÊ', 260);
-  LQ.push(['big', 72.5, 75.5, ['O SEGREDO DAS', 'PEQUENAS BOCAS'], 450, [86, 118], ['#fff', '#ffd93b'], 1.0]);
+  pill(t, 72.4, 76.8, 'O AGRO QUE VOCÊ NÃO VÊ', 260);
+  LQ.push(['big', 72.5, 77.2, ['O SEGREDO DAS', 'PEQUENAS BOCAS'], 450, [86, 118], ['#fff', '#ffd93b'], 1.0]);
   LQ.push(['fn', () => { const a = ss(73.0, 73.4, t); if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; ctx.font = '800 44px Nunito'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#000'; ctx.lineWidth = 10; ctx.strokeText('Estômatos e fisiologia vegetal.', 540, 690); ctx.fillStyle = '#fff'; ctx.fillText('Estômatos e fisiologia vegetal.', 540, 690); ctx.restore(); }]);
   LQ.push(['fn', () => { const k = cl((t - 73.4) / .5); if (k <= 0) return; const sc = 1 - Math.cos(k * Math.PI * 2.4) * Math.exp(-k * 5.5) * .4, pulse = 1 + .03 * Math.sin(t * 6); ctx.save(); ctx.translate(540, 820); ctx.scale(sc * pulse, sc * pulse); ctx.font = '800 42px Nunito'; const w = ctx.measureText('Siga para mais segredos do campo!').width + 90; rr(-w / 2, -44, w, 88, 44); ctx.fillStyle = '#ffd93b'; ctx.shadowColor = 'rgba(0,0,0,.5)'; ctx.shadowBlur = 24; ctx.fill(); ctx.shadowBlur = 0; ctx.strokeStyle = '#000'; ctx.lineWidth = 5; ctx.stroke(); ctx.fillStyle = '#1a1a0a'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('Siga para mais segredos do campo!', 0, 3); ctx.restore(); }]);
 }
