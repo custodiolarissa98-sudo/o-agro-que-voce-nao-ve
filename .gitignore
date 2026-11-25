@@ -6,3 +6,4 @@
 *.onnx
 list.txt
 voices-*.bin
+**/log*.txt
