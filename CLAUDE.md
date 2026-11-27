@@ -5,10 +5,12 @@ Todo episódio novo segue estes padrões. Não mude nada aqui sem autorização 
 
 ## Narração (OBRIGATÓRIO — mesma voz em todos os episódios)
 
-**Voz oficial da série (desde 25/11/2026): voz do CapCut**, escolhida pela dona do projeto por soar mais real
-(perguntas com entonação de pergunta, ritmo natural).
+**Voz oficial da série (desde 27/11/2026): voz MASCULINA do CapCut**, a mesma da narração enviada para o
+episódio 02 (`ep02_cabelo_milho/tts_capcut/`). Usar esta em todos os próximos episódios.
 - **Origem:** aplicativo CapCut → editor → Texto → Adicionar texto → **"Texto em áudio"**.
-- **Nome da voz no CapCut:** **"Apresentadora"** (voz feminina, tom médio ≈ 247 Hz). Usar sempre esta.
+- **Nome da voz no CapCut:** A CONFIRMAR com a dona do projeto (voz masculina, tom médio ≈ 114 Hz).
+  Para conferir se uma narração nova usa a voz certa, comparar o tom com `ep02_cabelo_milho/tts_capcut/`.
+- Voz anterior do CapCut: "Apresentadora" (feminina, ≈ 247 Hz), usada só na versão 2 do episódio 01. Não usar mais.
 - **Fluxo:** a dona do projeto gera a narração no CapCut (um parágrafo por cena, sem música) e envia o vídeo/áudio exportado.
   O Claude extrai a voz, separa os parágrafos pelas pausas e encaixa cada um na sua cena.
   Se um parágrafo não couber na cena, acelerar no máximo ~12% (`atempo`) ou ajustar a duração das cenas.
@@ -56,4 +58,5 @@ samples, sr = k.create(texto, voice="pf_dora", speed=1.15, lang="pt-br")
 ## Arquivos
 
 - `ep01_estomatos/` — "O segredo das pequenas bocas das plantas": arquivos-fonte (animação, texturas, legendas, áudio e narração).
+- `ep02_cabelo_milho/` — "O Segredo do Cabelo do Milho": arquivos-fonte; narração oficial em `tts_capcut/`.
 - Os MP4 finais não vão para o repositório (limite de 100 MB do GitHub); guarde-os fora dele.
